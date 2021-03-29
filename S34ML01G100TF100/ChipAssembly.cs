@@ -32,9 +32,9 @@ namespace S34ML01G100TF100
 
         ChipAssembly()
         {
-            myChip.devManuf = "SAMSUNG";
+            myChip.devManuf = "Spansion";
             myChip.name = "S34ML01G100TF100";
-            myChip.chipID = "ECF1001540";      // device ID - ECh F1h 00h 15h 40h (k9f1g08u0d_00.pdf page 36)
+            myChip.chipID = "01F1001D";      // device ID - 01h F1h 00h 1Dh 
 
             myChip.width = Organization.x8;    // chip width - 8 bit
             myChip.bytesPP = 2048;             // page size - 2048 byte (2Kb)
@@ -86,9 +86,9 @@ namespace S34ML01G100TF100
 
             myChip.registers.Add(                  // https://github.com/JuliProg/Wiki/wiki/ID-Register
                 "Id Register").
-                Size(5).
-                Operations("ReadId_90h").               
-                Interpretation(ID_interpreting);
+                Size(4).
+                Operations("ReadId_90h");               
+                //Interpretation(ID_interpreting);
 
             #endregion
 
