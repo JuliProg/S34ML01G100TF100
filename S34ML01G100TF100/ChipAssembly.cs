@@ -65,7 +65,7 @@ namespace S34ML01G100TF100
             
             //------- Select the Initial Invalid Block (s) algorithm    https://github.com/JuliProg/Wiki/wiki/Initiate-Invalid-Block-----------
                 
-            myChip.InitialInvalidBlock = "InitInvalidBlock_v1";
+            myChip.InitialInvalidBlock = "InitInvalidBlock_v2";
                 
             #endregion
                 
