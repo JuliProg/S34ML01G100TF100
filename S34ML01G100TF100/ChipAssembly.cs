@@ -95,6 +95,13 @@ namespace S34ML01G100TF100
               Size(768).
               Operations("ReadParameterPage_ECh");
 
+            myChip.registers.Add(
+                "OTP area").
+                Size(64 * 2112).                            // first 64 pages
+                Operations("OTP_Mode_On_v2").               // set chip to OTP mode then Page Read or Page Program commands for first 64 pages ( block[0] )
+                Operations("OTP_Mode_Off_v2");              // to exit the OTP area and access the normal flash array
+
+
             #endregion
 
 
